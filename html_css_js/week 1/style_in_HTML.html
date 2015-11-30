@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    
+    
+    <head>
+        <title> style in HTML </title>
+        <link href="style_in_HTML.css" rel="stylesheet" type="text/css">
+        <!-- one alternative is to use the tags <style> style rules </stype> -->
+    </head>
+    
+    <body>
+        
+        <section>
+        
+            <h1> This page demonstrate how style can be applied to an html file </h1>
+            <p1> a cascading style sheet (css) is created seperately which define a set of style rule to be followed and applied to this file, it is done at the head section </p1>
+            
+            <p> this paragraph was defined to be blue in the css file </p>
+            
+            <p3> Some commonly used style on texts are:
+                <ul>
+                    <li> <strong> colour </strong> for text colour </li>
+                    <li> <strong>  background </strong> for background colour </li>
+                    <li> <strong> font-family </strong> for text fonts </li>
+                    <li> <strong> font-size </strong> for text sizes </li>
+                    <li> <strong> text-align </strong> for text alignment </li>
+                    
+                </ul>
+            </p3>
+            
+        </section>
+        
+        <section>
+            <h3> giving elements ID in order to be referenced for style </h3>
+            <!-- ID do not change the style, only act as an identifier-->
+            <ul id="rainbowColours">
+                <li id="red"> RED </li> 
+                <li id="yellow"> YELLOW </li>
+                <li id="green">GREEN</li>
+                <li id="blue">BLUE</li>
+                <li id="violet"> VIOLET</li>
+            </ul>
+        </section>
+        
+        <section>
+            <h3> creating class </h3>
+            <p1> creating class allows defining any desired rules, each class can be used on multiple elements and each element can take on multiple classes. </p1>
+            
+            <p class= "wundabar"> wundabar</p>
+            <p class= "wundabar mysterious"> wundabar + mysterious </p>
+            <p class= "candy"> candy </p>
+            
+        </section>
+        
+        <section>
+            <h3> Inline Style </h3>
+            <p1> a style rule which directly apply to a particular element</p1>
+            
+            <p style="text-align:right"> Yup, I'm on the RIGHT! woohoooo!! </p>
+        
+        </section>
+        
+        <section>
+            <h3> Context control </h3>
+            <p1> applying style only to elements in specific context </p1>
+            
+            <ol>
+                <li> this is a list item in an Ordered List context </li>
+                <li> So it is showing the colour Teal, as of the CSS file </li>
+                <li> This rule doesn't apply to any list items that are in Unordered List </li>
+            </ol>
+            
+        </section>
+        <hr>
+        <hr>
+        
+        <section>
+            <h3> Psudo Classes </h3>
+            <p1> Are classes with some kind of "intelegence", the style can be set to change after some conditions are fulfilled, below are some examples: </p1>
+            
+            <ul>
+                <li> Hover - text change colour when cursor is over it </li>
+                <li> a: link - a link </li>
+                <li> a: visited - a link that has been visited </li>
+                <li> a: active - means a link is currently processing </li>
+                <li> p: empty - means an empty element </li>
+            </ul>
+            
+            <h4> Demo: </h4>
+            <!-- style is in style_in_HTML.css -->
+            
+            <a href= "https://www.facebook.com/"> FACEBOOK </a> <br>
+            <a href= "http://www.google.com.au"> GOOGLE </a>
+            
+            
+        </section>
+        
+    </body>
+
+</html>

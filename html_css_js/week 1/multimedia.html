@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head> <title> meow meow </title> </head>
+    
+<body>
+    <section> 
+        <h1> This is going to be an adorable webpage full of meow's </h1>
+    </section>
+    
+    <h2> First is images </h2>
+    
+    <section>
+        <p> <h3> first cat image is not scaled: </h3>
+        <img src="meow1.jpg">
+        </p>
+    
+    </section> 
+    
+    <section>
+        <p> <h3> image is given attributes to scaled down, there are many ways: </h3> </p>
+        
+        <p><!-- this one specifies both width and height, so the image is squashed -->
+        <img src="meow2.jpg" width = "300" height = "300">
+        </p>
+    
+        <p>
+        <!-- so it's better to give only one attribute, and let it auto scale accordingly -->
+        <img src="meow2.jpg" width = "300">
+        </p>
+        
+        <p>
+        <!-- attribute can also be given as percentage of the element that contains the picture
+        this means that it will change its size if you change the size of browser screen -->
+        <img src="meow2.jpg" width = "50%"
+        </p>
+            
+    </section>
+    
+    <h2> Time for sounds! </h2>
+
+    <section>
+        
+        <p> 
+            <!-- This way of adding audio doesn't play, you can't hear --> 
+            <audio src="fireplace.mp3"></audio>
+        </p>
+        
+        <p>
+            <!-- this makes the audio play automatically as soon as browser open -->
+            fireplace sound played automatically and repeat
+            <audio src= "fireplace.mp3" autoplay loop >
+                
+            <!-- handling older browser by giving error message when not supported -->
+                <p> Sorry! Your browser doesn't support the <em> audio </em> tag </p>
+                
+            </audio>
+        </p>
+        
+        <p> giving control for user to play musics </p>
+        <p> buddy </p>
+        <p><audio src="buddy.mp3" controls></audio></p>
+        <p> november </p>
+        <p><audio src="November.mp3" controls></audio></p>
+        <p> carefree </p>
+        <p><audio src="Carefree.mp3.mp3" controls></audio></p>
+        <p> meow </p>
+        <p><audio src="cat_meow.mp3" controls></audio></p>
+
+        
+    </section>
+    <h2> videos </h2>
+
+    <section>
+        <p> adding video is very similar to audio, with autoplay, loop, controls attributes </p>
+        <p> <video src="catsvid.mp4" controls alt = "Kittens moving head in sync"></video></p>
+    
+    </section>
+    
+</body>    
+
+
+
+
+</html>

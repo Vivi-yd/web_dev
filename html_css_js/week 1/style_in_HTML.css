@@ -1,0 +1,24 @@
+
+h1 {color: orange}
+p {color: blue}
+
+
+#rainbowColours {background:black}
+#red {color:red}
+#yellow {color:yellow}
+#green {color:green}
+#blue {color:blue}
+#violet {color:violet}
+
+
+.wundabar {color:aqua; font-family: cursive}
+.candy {color:pink; background: deeppink}
+.mysterious {background:purple}
+
+ol li {color:teal} 
+
+a:link {background: yellow}
+a:visited {background: violet}
+a:hover {color: mediumvioletred}
+a:active {color: goldenrod}
+p:empty {background:mediumslateblue}
