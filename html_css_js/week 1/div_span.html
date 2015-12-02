@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    
+    <head> 
+        <title> div and span </title>
+        
+        <style>
+            span {color:red}
+        </style>
+        
+    </head>
+    
+    <body>
+        
+        <section> 
+        <h3> div element </h3>
+        
+            <p> div and span both represent a portion of the page, it is an element that contains things, it doesn't have default style </p>
+        
+            <p> This is a paragraph by "p" </p>
+        
+            <div> This is a paragraph by "div" with no style </div>
+        
+            <div style="background: lightblue"> this is a paragrph with "div" and style </div>
+        
+            <div style="background: lightyellow; font-size:18pt; fort-family: Arial; width: 80%">
+            This is a paragraph with "div" and lots of style rules 
+            </div>
+        
+        </section>
+        
+        <section>
+            <h3> positioning an element </h3>
+            <p> Many element, including "div" can be put at specified position by: 
+                <ul>
+                    <li> 
+                        Using <strong> position:absolute; top:XXpx; left:YYpx </strong>
+                        to specify top left corner of element relative to the page.
+                    </li>
+                    
+                    <li>
+                        Using <strong> position:relative; top:XXpx; left:YYpx </strong>
+                        to specify top left corner of element relative to where it would
+                        normaly appear.
+                    </li>
+                </ul>
+            </p>
+            <div style="background:pink; fort-size:14pt; font-family: courier;
+                        position:relative; top: 170px; left: -20px"> 
+                This div will be position lower than it should and pushed too much to the right
+                This is why it appears lower than the next section "span" in the webpage.
+            </div>
+        
+        </section>
+    
+        <section>
+            <h3> Span </h3>
+            
+            <p> 
+                just like div, span is an element, doesn't have default style
+                but it's used for only a few words.
+            </p>
+            
+            <p> This paragraph contains only a <span> few words </span></p>
+            <!-- see style rule at the top -->
+            
+        </section>
+        
+        
+        
+        
+    </body>
+
+</html>
