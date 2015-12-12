@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Grouping Elements </title>
+        <meta name="author" content="Vivi">
+        
+    </head>
+    
+    <body>
+        <h1> Grouping the Elements </h1>
+        
+        <h3> Fieldset and Legend </h3>
+        <p> 
+            The "fieldset" and the "legend" can help group elements 
+            that goes together, also produce a visual square to represent group,
+            this type of grouping can be used with anything including forms.
+            <br>
+            <strong> Example: </strong>
+        </p>
+        
+        <form> 
+            <fieldset>
+                <legend> Interests </legend>
+                <input type="checkbox" name="interest" value="sport"> Sport <br>
+                <input type="checkbox" name="interest" value="music"> Music <br>
+                <input type="checkbox" name="interest" value="books"> Books <br>
+                <input type="checkbox" name="interest" value="cars"> Cars <br>
+                
+            </fieldset> <br><br>
+            
+            <fieldset>
+                <legend> Personal Info </legend>
+                <label for="firstname"> Given name: </label>
+                <input type="text" id="firstname" name="givenname" value="Vivi">
+                <br> <br>
+                <label for="lastname"> Last name: </label>
+                <input type="text" id="lastname" name="familyname" 
+                   placeholder="Put your surname here plzz" autofocus>
+                <br> <br>
+                <label for="age"> Age: </label>
+                <input type="text" id="age" name="age" required> 
+                <br> <br>
+                
+            </fieldset>
+        
+        </form>
+        
+        <h3> Other grouping method (using Style) </h3>
+        <div style="border:1px solid"> 
+            Group 1a <br>
+            Group 1b
+        </div>
+        <br> <br>
+        
+        <p style="border:2px solid"> Group 2a <br> Group 2b </p>
+        
+        
+        
+    
+    </body>
+
+
+</html>
