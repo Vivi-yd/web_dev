@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+
+<html>
+    
+    <head>
+        <title> Creating Forms </title>
+        <meta name="author" content="Vivi">
+        
+    </head>
+    
+    <body>
+        <h1> Forms </h1>
+        <p> 
+            Forms allow users to fill in data from a browser and submit it 
+            to the server, where it gets process and sends a response for
+            the browser to display.
+        </p>
+        
+        <h3> creating a form </h3>
+        
+        <ul> 
+            <li> 
+                <strong> action = "destination you want" </strong> tells the broswer
+                what program to send the form data to, e.g. :
+                <ul>
+                    <li>
+                        form action="http://www.server.com/subdirectory/program.php"
+                    </li>
+                    <li>
+                        form action="subdirectory/program.php" (if the program is on the same server                         as the html file)
+                    </li>
+                    <li>
+                        form action="program.php" ( if the program is in the same directory as the                           html file )
+                    </li>
+                    
+                </ul>
+                
+            </li>
+            
+            <li>
+                <strong> method </strong> can be either <strong> "get" </strong> or <strong> 
+                "post"</strong>
+                <ul>
+                    <li> 
+                        <strong> method= "get" </strong>
+                        get is the defaul method, the form data will be displayed on the URL
+                        (like search query in seach engine), but can only handle <em> small
+                        transmission (few hundred characters) </em> and cannot keep secret
+                    </li>
+                    
+                    <li>
+                        <strong> method = "post" </strong>
+                        you can't see any data when using post method, post can also handle a 
+                        big transmission (a file)
+                        
+                    </li>
+                    
+                </ul>
+            
+            </li>
+            
+            <li>
+                form textarea example:
+                <form>
+                    <p> Please enter any feedback below. </p>
+                    
+                    <textarea rows="3" cols="60" name="feedback">
+                        Please enter your text here
+                    </textarea>
+                
+                </form>
+            
+            </li>
+            
+            <li>
+                a <strong> submit button </strong> is needed for user to submit the data to the 
+                server.
+                
+            </li>
+            
+        </ul>
+        
+        <h3> A typical basic form </h3>
+        
+        <form action="http://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php"
+              method="get">
+            <p> Please enter any feedback you have. </p>
+            
+            <textarea rows="3" cols="60" name="feedback">
+            Please enter your text here
+            </textarea>
+            <br>
+            <input type="submit" value="Send">
+            
+        </form>
+        
+        <h3> Forms with additional features: </h3>
+        
+        <p> 
+            Form input element 
+            <ul>
+                <li> submit button </li>
+                <li> Plain text (not text area) </li>
+                <li> Checkbox </li>
+                <li> Radio Button </li>
+                <li> Password Field </li>
+            </ul>
+        </p>
+        
+        <form action="http://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php"
+              method="post">
+            Plain text demo: Please enter your name. <br>
+            <input type="text" name="feedback"> <br> <br>
+            
+            <!-- IMPORTANT, name has to be the same in order to specify that it belongs to the
+            same set of input -->
+            Radio button demo: What is your gender? <br>
+            <input type="radio" name="gender" value="male"> Male <br>
+            <input type="radio" name="gender" value="female"> Female <br>
+            <input type="radio" name="gender" value="none" checked> Do not wish to tell <br> <br>
+            
+            Checkbox demo: Please select a few of your interests. <br>
+            <input type="checkbox" name="interest" value="sport"> Sport <br>
+            <input type="checkbox" name="interest" value="music"> Music <br>
+            <input type="checkbox" name="interest" value="books"> Books <br>
+            <input type="checkbox" name="interest" value="cars"> Cars <br><br>
+            
+            <!-- CAREFUL! if you use the "get" method in this form, the URL will reveal the
+            input i.e. The password!!! -->
+            Password Field Demo: Please choose a password. <br>
+            <input type="password" name="userpassword"> <br>
+            <input type="submit" value="Confirm"> <br>
+            
+        </form>
+        
+        <h3> Selecting from a list (Dropdown menu) </h3>
+        
+        <form>
+            
+            What country are you from ? <br>
+            
+            <select name="cities">
+                <option value="aus"> Australia </option>
+                <option value="gce"> England </option>
+                <option value="hkg"> Hong Kong </option>
+                <option value="ind"> India </option>
+                <option value="irq"> Iraq </option>
+                <option value="pak"> Pakistand </option>
+                <option value="thd"> Thailand </option>
+            
+            </select>
+        
+        </form>
+        
+        <h3> 
+            Other attribues in plain text field (type="text") :
+        </h3>
+        <p>
+            <ul>
+                <li> <strong>value="something" </strong> will be what is shown what page is 
+                    loaded 
+                </li>
+                <li> <strong> placeholder="something"</strong> will be shown initially 
+                    but disappear when user enter data
+                </li>
+                <li> <strong>autofocus</strong> sets which field is highlighted </li>
+                <li> <strong> required</strong> means this field must be filled, 
+                    else submission declined 
+                </li>
+                
+            </ul> <br>
+        Additionally, label can be added to the input to assign that input field to a label
+        so that when that label is clicked, the field will highlights
+        </p>
+        
+        <p> <strong>Example: </strong> </p>
+
+        <form>
+            
+            <label for="firstname"> Given name: </label>
+            <input type="text" id="firstname" name="givenname" value="Vivi">
+            <br> <br>
+            <label for="lastname"> Last name: </label>
+            <input type="text" id="lastname" name="familyname" 
+                   placeholder="Put your surname here plzz" autofocus>
+            <br> <br>
+            <label for="age"> Age: </label>
+            <input type="text" id="age" name="age" required> <!-- Required -->
+            <br> <br>
+
+            <input type="submit" value="Submit"> 
+
+        </form>
+
+        <h3> Uploading files </h3>
+        <p> 
+            When uploading file the <strong> enctype </strong> attribute is required in the form 
+            . The enctype attribute specifies how the form-data should be encoded when 
+            submitting it to the server. <br>
+            Below is an example where no characters are encoded. 
+            This value is required when you are using forms that have a file upload control.
+            <strong> <br> NOTE: </strong> enctype attribute can be used only with 
+            <strong> method="post"</strong> (large file transfer).
+            
+        </p>
+        
+        <form action="http://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php"
+              method="post" enctype="multipart/form-data">
+            
+            Select file you wish to upload then click submit <br>
+            <input type="file" name="UploadingFile"> <br><br>
+            
+            
+            <input type="submit" value="Upload this file">
+            
+        </form>    
+            
+        <h3> More Elements :</h3>
+        <p>
+            <ul>
+                <li> Number Input </li>
+                <li> Date Input </li>
+                <li> Time Input </li>
+                <li> Colour Picker </li>
+                <li> Slider </li>
+            </ul>
+        
+        </p>
+        
+        <form action="http://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php"
+              method="post">
+            
+            <label for="age"> Your age: </label>
+            <input type="number" id="age" min="0" max="99" step="1" value="20" name="Age"
+                   required> <br><br>
+            <label for="birthday"> Your Birthday: </label>
+            <input type="date" id="birthday" name="bday"> <br><br>
+            <label for="working"> Your Working Hours Begins at: </label>
+            <input type="time" id="working" name="workingHour"> <br><br>
+            <label for="colour"> Your Favourite Colour: </label>
+            <input type="color" name="color"> <br><br>
+            
+            <label for="eng"> Your English Proficiency </label>
+            Ineffective <input type="range" min="0" max="100" step="5" value="80"
+                               id="eng" name="English"> Very Fluent
+            <input type="submit" value="Lodge Your Application!">
+            
+        
+        </form>
+        
+    
+    </body>
+
+</html>
